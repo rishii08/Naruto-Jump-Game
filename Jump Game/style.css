@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: red;
+    overflow: hidden;
+}
+
+.game{
+    background-image: url(narutobg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    height: 100vh;
+    width: 100%;
+}
+
+.player img{
+    height: 100%;
+    width: 100%;
+}
+.player{
+    background-image: url(narutof.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 190px;
+    width: 165px;
+    position: absolute;
+    bottom: 0px;
+    left: 100px;
+}
+.enemy{
+    background-image: url(kakashif.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 350px;
+    position: absolute;
+    bottom: 0px;
+    left: 40vw;
+}
+
+.gameover{
+    visibility: visible;
+    position: relative;
+    top: 50px;
+    font-size: 80px;
+    text-align: center;
+    font-family: fantasy;
+}
+.goimg{
+    background-image: url(sasukef.png);
+    visibility: hidden;
+    height: 500px;
+    width: 600px;
+    left: 850px;
+    top: -100px;
+    position: absolute;
+}
+
+#scorecount{
+    position: absolute;
+    border: 8px solid black;
+    border-radius: 12px;
+    top: 50px;
+    left: 10px;
+    font-size: 30px;
+    text-align: center;
+    font-family: fantasy;
+}
+
+.animateplayer{
+    animation: playermove 0.6s linear;
+}
+
+@keyframes playermove{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 400px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+
+.enemymove{
+    animation: enemymove 6s linear infinite;
+}
+@keyframes enemymove {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
